@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Emotion Viewer</title>
+    <style>
+        #emotion-display {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: none;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emoji Emotion Viewer</h1>
+    <input type="text" id="emoji-input" placeholder="Enter an emoji">
+    <button id="show-emotion-button">Show Emotion</button>
+    <div id="emotion-display"></div>
+
+    <script>
+        const emojiEmotions = {
+            "😀": "Happiness, joy",
+            "😃": "Excitement, enthusiasm",
+            "😄": "Joy, delight",
+            "😁": "Joy, happiness",
+            "😆": "Laughter, amusement",
+            "😅": "Relief, nervous laughter",
+            "😂": "Extreme laughter",
+            "😊": "Warmth, positivity, happiness",
+            "😇": "Innocence, good intentions",
+            "🙂": "Friendliness, contentment",
+            "😍": "Love, adoration",
+            "🥰": "Affection, love, warmth",
+            "😘": "Affection, love",
+            "😗": "Affection, friendliness",
+            "😙": "Affection, happiness",
+            "😚": "Affection, warmth",
+            "🤗": "Support, comfort, affection",
+            "🤩": "Amazement, admiration",
+            "😞": "Disappointment, sadness",
+            "😟": "Concern, worry",
+            "😢": "Sadness, sorrow",
+            "😭": "Intense sadness, grief",
+            "😤": "Anger, frustration",
+            "😠": "Anger, displeasure",
+            "😡": "Rage, intense anger",
+            "😫": "Exhaustion, frustration",
+            "😩": "Overwhelmed, despair",
+            "😖": "Frustration, confusion",
+            "😣": "Struggle, determination",
+            "😔": "Thoughtfulness, sadness",
+            "😒": "Displeasure, skepticism",
+            "😓": "Sadness, stress",
+            "😮": "Surprise, shock",
+            "😯": "Astonishment, silence",
+            "😲": "Shock, amazement",
+            "😳": "Embarrassment, shock",
+            "😱": "Fear, horror",
+            "😨": "Fear, anxiety",
+            "😰": "Anxiety, fear",
+            "🤯": "Mind-blowing, shock, amazement",
+            "🤔": "Thinking, contemplation",
+            "🤨": "Skepticism, disbelief",
+            "😐": "Neutrality, indifference",
+            "😑": "Indifference, lack of expression",
+            "🙄": "Disapproval, frustration",
+            "😏": "Smugness, confidence",
+            "😌": "Relief, relaxation",
+            "😴": "Sleepiness, boredom",
+            "😜": "Playfulness, joking",
+            "🤪": "Goofiness, silliness",
+            "😝": "Playfulness, joking",
+            "🤭": "Surprise, embarrassment",
+            "🤫": "Silence, secrecy",
+            "🤥": "Dishonesty, lying"
+        };
+
+        document.getElementById('show-emotion-button').addEventListener('click', function() {
+            const emoji = document.getElementById('emoji-input').value.trim();
+            const emotionDisplay = document.getElementById('emotion-display');
+
+            if (emojiEmotions[emoji]) {
+                emotionDisplay.textContent = emojiEmotions[emoji];
+                emotionDisplay.style.display = 'block';
+            } else {
+                emotionDisplay.textContent = 'No emotion found for this emoji.';
+                emotionDisplay.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
